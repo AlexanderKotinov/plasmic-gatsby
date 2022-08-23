@@ -64,15 +64,29 @@ function PlasmicHomepage__RenderFunc(props) {
           )}
         >
           <div
-            data-plasmic-name={"text"}
-            data-plasmic-override={overrides.text}
             className={classNames(
               projectcss.all,
               projectcss.__wab_text,
-              sty.text
+              sty.text__tQxmd
             )}
           >
             {"Site title"}
+          </div>
+
+          <div
+            data-plasmic-name={"freeBox"}
+            data-plasmic-override={overrides.freeBox}
+            className={classNames(projectcss.all, sty.freeBox)}
+          >
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text___9KfQo
+              )}
+            >
+              {"Site content here"}
+            </div>
           </div>
         </div>
       </div>
@@ -81,8 +95,8 @@ function PlasmicHomepage__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "text"],
-  text: ["text"],
+  root: ["root", "freeBox"],
+  freeBox: ["freeBox"],
 }
 
 function makeNodeComponent(nodeName) {
@@ -119,7 +133,7 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    text: makeNodeComponent("text"),
+    freeBox: makeNodeComponent("freeBox"),
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
     internalArgProps: PlasmicHomepage__ArgProps,
