@@ -43,8 +43,8 @@ module.exports = {
       options: {
         projects: [
           {
-            id: 'JDgDoF4f3aETGTknV7Myf', // ID of a project you are using
-            token: 'mfKxMEiwaNrRn99nwjLn063wRGRsWxGYKcDDhLP5mRvwU0SMwoMTHMVuzryVUjPwfMOojmP9uu0AMR6FfHtA' // API token for that project
+            id: 'oL5yZkzJSf6oShgqK2PGLg', // ID of a project you are using
+            token: 'TCidBuFygELDPEjxHsdivmFwfqHE7m0bVoKBXm304d8DOH191Rb8JYNeR0p4kRHHff0yLlNMtETBnQRH9GA' // API token for that project
           }
         ],
         // Fetches the latest revisions, whether or not they were unpublished!

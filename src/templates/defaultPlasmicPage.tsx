@@ -1,10 +1,11 @@
 // @ts-ignore
 import React from 'react';
-import { initPlasmicLoader, PlasmicComponent, PlasmicRootProvider } from '@plasmicapp/loader-gatsby';
+import { PlasmicComponent, PlasmicRootProvider } from '@plasmicapp/loader-gatsby';
 import { graphql } from 'gatsby';
 
 // You can use any library you want for <head/> injection
 import { Helmet } from 'react-helmet';
+import { initPlasmicLoaderWithRegistrations } from '../plasmic-init';
 
 export const query = graphql`
   query ($path: String) {
@@ -18,7 +19,7 @@ const PlasmicGatsbyPage = ({ location, data }) => {
   const pageMeta = plasmicComponents.entryCompMetas[0];
   const pageMetadata = pageMeta.pageMetadata;
   return (
-    <PlasmicRootProvider loader={initPlasmicLoader(plasmicOptions)} prefetchedData={plasmicComponents}>
+    <PlasmicRootProvider loader={initPlasmicLoaderWithRegistrations(plasmicOptions)} prefetchedData={plasmicComponents}>
       <Helmet>
         {pageMetadata.title && <title>{pageMetadata.title}</title>}
         {pageMetadata.title && <meta property="og:title" content={pageMetadata.title} />}
